@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PIZZA PLACE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>.menu-card img{object-fit:cover;height:180px}</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">HOME </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+      aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbars">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-dark text-white ms-lg-2 px-3" href="/booking.html">Book</a></li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="cart.html">
+            <i class="bi bi-cart"></i>
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container" style="padding-top:90px">
+  <h2 class="mb-4 fw-bold">Our Menu</h2>
+  <div id="menu-list" class="row"></div>
+
+  <!--Main container-->
+  <div class="container-fluid bg-black text-white py-5 display-4" id="menu">
+    <div class="container">
+
+      <div class="text-center border border-dark">
+        <div class="d-flex ">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" class="col-4 tablink p-3 hover-red" id="mainLink">Pizza</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');" class="col-4 tablink p-3 hover-red">Pasta</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');" class="col-4 tablink p-3 hover-red">Starter</a>
+        </div>
+      </div>
+
+      <!-- Pizza Menu -->
+      <div id="Pizza" class="container-fluid menu p-4 bg-white">
+        <!-- Margherita -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Margherita</b></h1>
+          <span class="badge bg-dark text-white">$12.50</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'margherita', name:'Margherita', price:12.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Formaggio -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Formaggio</b></h1>
+          <span class="badge bg-dark text-white">$15.50</span>
+        </div>
+        <p class="text-muted">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'formaggio', name:'Formaggio', price:15.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Chicken -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Chicken</b></h1>
+          <span class="badge bg-dark text-white">$17.00</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, mozzarella, chicken, onions</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'chicken', name:'Chicken', price:17.0})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Pineapple'o'clock -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Pineapple'o'clock</b></h1>
+          <span class="badge bg-dark text-white">$16.50</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'pineappleoclock', name:'Pineapple o\'clock', price:16.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Meat Town -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Meat Town</b> <span class="badge bg-red small-tag">Hot!</span></h1>
+          <span class="badge bg-dark text-white">$20.00</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'meattownhot', name:'Meat Town Hot!', price:20.0})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Parma -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Parma</b> <span class="badge bg-grey small-tag">New</span></h1>
+          <span class="badge bg-dark text-white">$21.50</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'parmanew', name:'Parma New', price:21.5})">Add to Cart</button>
+      </div>
+
+      <!-- Pasta Menu -->
+      <div id="Pasta" class="container-fluid menu p-4 bg-white">
+        <!-- Lasagna -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Lasagna </b><span class="badge bg-grey small-tag">Popular</span></h1>
+          <span class="badge bg-dark text-white">$13.50</span>
+        </div>
+        <p class="text-muted">Special sauce, mozzarella, parmesan, ground beef</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'lasagnapopular', name:'Lasagna Popular', price:13.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Ravioli -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Ravioli</b></h1>
+          <span class="badge bg-dark text-white">$14.50</span>
+        </div>
+        <p class="text-muted">Ravioli filled with cheese</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'ravioli', name:'Ravioli', price:14.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Spaghetti Classica -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Spaghetti Classica</b></h1>
+          <span class="badge bg-dark text-white ">$11.00</span>
+        </div>
+        <p class="text-muted">Fresh tomatoes, onions, ground beef</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'spaghetticlassica', name:'Spaghetti Classica', price:11.0})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Seafood pasta -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Seafood pasta</b></h1>
+          <span class="badge bg-dark text-white">$25.50</span>
+        </div>
+        <p class="text-muted">Salmon, shrimp, lobster, garlic</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'seafoodpasta', name:'Seafood pasta', price:25.5})">Add to Cart</button>
+      </div>
+
+      <!-- Starter Menu -->
+      <div id="Starter" class="container-fluid menu p-4 bg-white">
+        <!-- Today's Soup -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Today's Soup </b><span class="badge bg-grey small-tag">Seasonal</span></h1>
+          <span class="badge bg-dark text-white">$5.50</span>
+        </div>
+        <p class="text-muted">Ask the waiter</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'todayssoupseasonal', name:'Today\'s Soup Seasonal', price:5.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Bruschetta -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Bruschetta</b></h1>
+          <span class="badge bg-dark text-white">$8.50</span>
+        </div>
+        <p class="text-muted">Bread with pesto, tomatoes, onion, garlic</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'bruschetta', name:'Bruschetta', price:8.5})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Garlic bread -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Garlic bread</b></h1>
+          <span class="badge bg-dark text-white ">$9.59</span>
+        </div>
+        <p class="text-muted">Grilled ciabatta, garlic butter, onions</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'garlicbread', name:'Garlic bread', price:9.59})">Add to Cart</button>
+        <hr class="text-muted">
+
+        <!-- Tomozzarella -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Tomozzarella</b></h1>
+          <span class="badge bg-dark text-white">$10.50</span>
+        </div>
+        <p class="text-muted">Tomatoes and mozzarella</p>
+        <button class="btn btn-sm btn-primary d-block mt-2 mb-3" onclick="addToCart({id:'tomozzarella', name:'Tomozzarella', price:10.5})">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="py-5 bg-dark text-white mt-5">
+  <div class="container text-center small">
+    <p class="mb-1">&copy; <span id="year"></span> WixStyle Bistro · All rights reserved</p>
+    <p class="mb-0">123 Market Street · +27 11 555 1234</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/cart.js"></script>
+
+  </body>
+</html>

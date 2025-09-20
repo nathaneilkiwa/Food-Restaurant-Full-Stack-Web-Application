@@ -1,0 +1,82 @@
+:root{
+  --hero-bg: linear-gradient(135deg, #111 0%, #333 100%);
+}
+body{ padding-top:70px; }
+.hero{
+  min-height: 70vh;
+  background: var(--hero-bg);
+  
+}
+
+
+.parallax {
+    background-attachment: fixed; /* parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* ensures div has visible height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.card{ 
+  border: 0; 
+  border-radius: 1rem; 
+}
+
+.btn{ 
+  border-radius: .75rem;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.hover-red:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+}
+
+.active-tab {
+  background-color: red;
+  color: white;
+}
+
+.border-dark {
+  border-color: dark-grey;
+}
+
+.badge {
+  padding: .6em .8em;
+}
+
+.small-tag {
+  padding: .3em .3em;
+}
+
+.bg-red {
+  background-color: red;
+  color: white;
+}
+
+.bg-grey {
+  background-color: grey;
+}
+
+.menu h1 {
+  color: black;
+}
+.img-about{
+   width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-sizing: border-box
+}
+
+footer{
+  border-top-left-radius: 1rem; 
+  border-top-right-radius: 1rem; 
+}

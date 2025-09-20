@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-wix-style-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "helmet": "^7.2.0",
+    "mongoose": "^8.18.1",
+    "morgan": "^1.10.1",
+    "stripe": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "description": "A fully responsive restaurant website inspired by modern Wix templates. Built with HTML, Bootstrap 5, CSS, and a Node.js/Express backend for bookings.",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC"
+}
