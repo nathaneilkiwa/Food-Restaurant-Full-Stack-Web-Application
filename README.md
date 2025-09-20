@@ -1,15 +1,28 @@
-# Restaurant (Wix-inspired) – Full-Stack
+🍽️ Food Restaurant – Full-Stack Web Application
 
-A fully responsive restaurant website inspired by modern Wix templates. Built with HTML, Bootstrap 5, CSS, and a Node.js/Express backend for bookings.
+A complete food ordering and restaurant management website built with Node.js, Express, and vanilla HTML/CSS/JS on the front-end.
+This project demonstrates a simple yet functional online restaurant system where users can browse the menu, book tables, add items to their cart, and place orders.
 
-## Features
-- Pages: Home, Menu, About, Booking
-- Fully responsive (mobile-first, Bootstrap 5)
-- Booking form with front-end and server-side validation
-- MongoDB via Mongoose
-- Clean, modern layout/components
-- Simple admin endpoint to view bookings: `GET /admin/bookings` (requires `ADMIN_TOKEN`)
+✨ Features
+🌐 Front-End
 
+Landing Page – Highlights the restaurant’s brand and offerings.
+
+Menu Page – Dynamically displays food items with images, prices, and an "Add to Cart" option.
+
+Booking Page – Allows users to reserve a table with date and time validation.
+
+Cart & Checkout – Interactive cart management and a mock checkout system.
+
+Responsive UI – Mobile-friendly design with custom CSS.
+
+⚙️ Back-End
+
+Node.js & Express – Handles server-side routing and API endpoints.
+
+Environment Variables – .env file for configuration (e.g., database connection, secret keys).
+
+RESTful API – For menu data, booking submissions, and order processing.
 ## Quick Start
 ```bash
 npm install
