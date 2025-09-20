@@ -25,32 +25,29 @@ Environment Variables – .env file for configuration (e.g., database connection
 RESTful API – For menu data, booking submissions, and order processing.
 
 📂 Project Structure
-food-restaurant/
-│
-├── server.js              # Main Express server
-├── package.json           # Node dependencies
-├── .env                   # Environment variables (not committed)
-│
-├── client/                # Front-end files
-│   ├── index.html         # Home page
-│   ├── menu.html          # Menu and ordering
-│   ├── booking.html       # Table booking form
-│   ├── cart.html          # Cart and checkout
-│   ├── checkout.html
-│   ├── checkout-success.html
-│   ├── about.html
-│   │
-│   ├── assets/
-│   │   ├── css/styles.css
-│   │   └── js/
-│   │       ├── main.js
-│   │       ├── menu.js
-│   │       ├── cart.js
-│   │       └── booking.js
-│   │
-│   └── img/               # Images for menu and pages
-│
-└── node_modules/          # Installed dependencies
+food-restaurant
+server.js          # Main Express server
+package.json       # Node dependencies
+env                # Environment variables (not committed)
+
+client/            # Front-end files
+index.html         # Home page
+menu.html          # Menu and ordering
+booking.html       # Table booking form
+cart.html          # Cart and checkout
+checkout.html
+checkout-success.html
+about.html
+
+assets/
+css/styles.css
+js/
+main.js
+menu.js
+cart.js
+booking.js
+img/               # Images for menu and pages
+node_modules/      # Installed dependencies
 
 🚀 Getting Started
 1️⃣ Prerequisites
