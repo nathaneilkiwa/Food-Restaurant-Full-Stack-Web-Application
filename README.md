@@ -3,7 +3,6 @@
 A complete food ordering and restaurant management website built with Node.js, Express, and vanilla HTML/CSS/JS on the front-end.
 This project demonstrates a simple yet functional online restaurant system where users can browse the menu, book tables, add items to their cart, and place orders.
 
-✨ Features
 🌐 Front-End
 
 Landing Page – Highlights the restaurant’s brand and offerings.
